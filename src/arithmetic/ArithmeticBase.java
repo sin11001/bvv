@@ -19,17 +19,20 @@ public class ArithmeticBase
     double calculate(double x, double y) 
         {
         Scanner sc =new Scanner(System.in);
+        public enum o {
+            PLUS,MINIS,DIVIDE,TIMES;
+        }
         System.out.println("Enter arithmetic operation to Perform: ");
         String s= sc.next();
         switch (s.toUpperCase()) 
         {
-            case "PLUS":
+            case PLUS:
                 return x + y;
-            case "MINUS":
+            case  MINUS:
                 return x - y;
-            case "TIMES":
+            case TIMES:
                 return x * y;
-            case "DIVIDE":
+            case DIVIDE:
                 return x / y;
             default:
                 throw new AssertionError("Unknown operations " + this);
